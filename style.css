@@ -1,0 +1,157 @@
+
+
+body {
+    background-color: rgb(223, 223, 235);
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    margin: 0;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: azure;
+    font-family: sans-serif;
+}
+
+.search-bar {
+    margin-top: 20px;
+}
+
+#search-input {
+    margin-top: 8px;
+    padding: 8px;
+    padding-right: 80px;
+    font-size: medium;
+    font-family: sans-serif;
+    width: 60%; /* Default width */
+}
+
+#search-btn {
+    background-color: black;
+    border: 2px solid black;
+    border-radius: 5px;
+    color: aliceblue;
+    font-family: sans-serif;
+    padding: 10px;
+}
+
+/* Meal Card Styles */
+.meal {
+    background-color: aliceblue;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.meal:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.meal img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: opacity 0.3s ease;
+}
+
+.meal:hover img {
+    opacity: 0.9;
+}
+
+.meal h3 {
+    font-size: 1.5rem;
+    margin: 15px 0;
+    color: #ff6f61;
+    padding: 0 10px;
+    text-transform: capitalize;
+}
+
+.meal a {
+    text-decoration: none;
+    color: azure;
+    background-color: #ff6f61;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 20px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+}
+
+.meal a:hover {
+    background-color: #f56558;
+}
+
+.meal a:active {
+    background-color: white;
+}
+
+.meal details {
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.meal a {
+    align-self: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Media Query for Phones */
+@media (max-width: 768px) {
+    header {
+        padding: 15px;
+        text-align: left;
+    }
+
+    #search-input {
+        width: 100%;
+        padding-right: 40px;
+        font-size: small;
+    }
+
+    #search-btn {
+        width: 100%;
+        margin-top: 10px;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .meal img {
+        height: 150px; /* Adjust image height for smaller screens */
+    }
+}
+
+/* Media Query for Larger Screens (Laptops) */
+@media (min-width: 769px) {
+    #search-input {
+        width: 40%;
+    }
+
+    #search-btn {
+        padding: 10px 15px;
+    }
+
+    .meal-list {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        padding: 10px;
+    }
+}
